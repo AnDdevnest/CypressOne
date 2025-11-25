@@ -1,0 +1,24 @@
+name: test
+run-name: ${{ github.actor }} is running build workflow
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    name: test cypress automations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.11.0'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Cypress Test Runner
+        run: npm run test
