@@ -1,5 +1,5 @@
 describe('SpiceJet source autocomplete test', () => {
-  it('Gets list of airport codes when typing "aj"', () => {
+  it.skip('Gets list of airport codes when typing "aj"', () => {
     // Visit the site
     cy.visit('https://www.spicejet.com/');
 

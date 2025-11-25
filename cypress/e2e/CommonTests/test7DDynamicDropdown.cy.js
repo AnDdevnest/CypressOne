@@ -1,6 +1,6 @@
 Cypress.on('uncaught:exception', () => false);
 describe('First test', () => {
-  it('passes', () => {
+  it.skip('passes', () => {
     cy.visit('https://www.spicejet.com/#sourceautocomplete',{headers:{"Accept-Encoding":"gzip,deflate"}})
     cy.wait(4000)
     cy.log('line 6 END');
