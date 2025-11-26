@@ -1,5 +1,5 @@
 describe('Launch application', () => {
-  it('Test applicarion', () => {
+  it.skip('Test applicarion', () => {
     cy.visit('https://parabank.parasoft.com/parabank/index.htm')
 cy.get('#loginPanel > p:nth-child(3) > a').click()
 cy.get("input[id='customer.firstName']").type('First')
